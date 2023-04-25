@@ -34,8 +34,8 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>category_name</th>
-                                <th>Subcategory_name</th>
+                                <th>Category Name</th>
+                                <th>SubCate. Name</th>
                                 <th>Image</th>
                                 <th width="100px">Action</th>
                             </tr>
@@ -63,15 +63,15 @@
 
                     },
                     {
-                        data: 'category_id',
+                        data: 'Category Name',
                         name: 'category_name'
                     },
                     {
-                        data: 'subcat_name',
+                        data: 'SubCate. Name',
                         name: 'subcat_name'
                     },
                     {
-                        data: 'image',
+                        data: 'Image',
                         name: 'Image'
                     },
                     {

@@ -34,9 +34,9 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>category_name</th>
-                                <th>Subcategory_name</th>
-                                <th>Product_name</th>
+                                <th>Category Name</th>
+                                <th>SubCat. Name</th>
+                                <th>Product Name</th>
                                 <th>Image</th>
                                 <th width="100px">Action</th>
                             </tr>
@@ -64,19 +64,19 @@
 
                     },
                     {
-                        data: 'category_id',
+                        data: 'Category Name',
                         name: 'Category_name'
                     },
                     {
-                        data: 'subcategory_id',
+                        data: 'SubCat. Name',
                         name: 'Subcategory_name'
                     },
                     {
-                        data: 'product_name',
+                        data: 'Product Name',
                         name: 'Product_name'
                     },
                     {
-                        data: 'image',
+                        data: 'Image',
                         name: 'Image'
                     },
                     {

@@ -34,7 +34,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>category_name</th>
+                                <th>Category Name</th>
 
                                 <th width="100px">Action</th>
                             </tr>
@@ -61,7 +61,7 @@
                         name: 'DT_RowIndex'
                     },
                     {
-                        data: 'category_name',
+                        data: 'Category Name',
                         name: 'category_name'
                     },
 
