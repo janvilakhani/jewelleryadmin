@@ -19,7 +19,7 @@
         </div>
         <div class="card">
             <div class="card-header text-right">
-                <a class="btn btn-primary" href="{{ route('banner.create') }}"><svg xmlns="http://www.w3.org/2000/svg"
+                <a class="btn btn-primary" href="{{ route('admin.banner.create') }}"><svg xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-plus-circle align-middle me-2">
@@ -56,7 +56,7 @@
             var table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('banner.index') }}",
+                ajax: "{{ route('admin.banner.index') }}",
                 columns: [{
                         data: 'DT_RowIndex',
                         name: 'DT_RowIndex'

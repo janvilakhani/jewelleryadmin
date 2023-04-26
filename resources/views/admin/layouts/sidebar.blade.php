@@ -16,24 +16,24 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('category.index') }}">
+                <a class="sidebar-link" href="{{ route('admin.category.index') }}">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Category</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('subcategory.index') }}">
+                <a class="sidebar-link" href="{{ route('admin.subcategory.index') }}">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Sub-Category</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('product.index') }}">
+                <a class="sidebar-link" href="{{ route('admin.product.index') }}">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Product</span>
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('banner.index') }}">
+                <a class="sidebar-link" href="{{ route('admin.banner.index') }}">
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Banner </span>
                 </a>
             </li>

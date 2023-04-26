@@ -16,7 +16,7 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body ">
-                            <form method="post" action="{{ route('banner.update', $banner->id) }}"
+                            <form method="post" action="{{ route('admin.banner.update', $banner->id) }}"
                                 enctype="multipart/form-data">
                                 @method('put')
                                 @csrf

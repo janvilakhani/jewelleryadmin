@@ -8,7 +8,7 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body ">
-                            <form method="post" action="{{ route('banner.store') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('admin.banner.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Banner Name</label>
@@ -19,6 +19,7 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Image</label>

@@ -8,7 +8,7 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body ">
-                            <form method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('admin.product.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Category name</label>
