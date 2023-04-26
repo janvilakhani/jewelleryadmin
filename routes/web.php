@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
@@ -43,3 +44,11 @@ Route::post('product/store', [ProductController::class, 'store'])->name('product
 Route::get('product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
 Route::get('product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 Route::put('product/update/{id}', [ProductController::class, 'update'])->name('product.update');
+/*  BANNER */
+
+Route::get('banner/index', [BannerController::class, 'index'])->name('banner.index');
+Route::get('banner/create', [BannerController::class, 'create'])->name('banner.create');
+Route::post('banner/store', [BannerController::class, 'store'])->name('banner.store');
+Route::get('banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
+Route::get('banner/delete/{id}', [BannerController::class, 'delete'])->name('banner.delete');
+Route::put('banner/update/{id}', [BannerController::class, 'update'])->name('banner.update');

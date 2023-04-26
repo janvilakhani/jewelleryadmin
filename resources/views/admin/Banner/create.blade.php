@@ -8,13 +8,13 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body ">
-                            <form method="post" action="{{ route('category.store') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('banner.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="form-label">Category Name</label>
-                                    <input class="form-control form-control-lg @error('category_name') is-invalid @enderror"
-                                        type="text" name="category_name" placeholder="Enter Category Name">
-                                    @error('category_name')
+                                    <label class="form-label">Banner Name</label>
+                                    <input class="form-control form-control-lg @error('banner_name') is-invalid @enderror"
+                                        type="text" name="banner_name" placeholder="Enter Category Name">
+                                    @error('banner_name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

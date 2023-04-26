@@ -64,19 +64,19 @@
 
                     },
                     {
-                        data: 'Category Name',
-                        name: 'Category_name'
+                        data: 'category_id',
+                        name: 'Category Name'
                     },
                     {
-                        data: 'SubCat. Name',
-                        name: 'Subcategory_name'
+                        data: 'subcategory_id',
+                        name: 'SubCat. Name'
                     },
                     {
-                        data: 'Product Name',
-                        name: 'Product_name'
+                        data: 'product_name',
+                        name: 'Product Name'
                     },
                     {
-                        data: 'Image',
+                        data: 'image',
                         name: 'Image'
                     },
                     {

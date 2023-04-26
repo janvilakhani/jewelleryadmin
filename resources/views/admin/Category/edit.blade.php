@@ -1,4 +1,12 @@
 @extends('admin.main')
+@section('custom_css')
+    <style>
+        .image {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="container-fluid p-0">
 
@@ -23,7 +31,18 @@
                                         </span>
                                     @enderror
                                 </div>
-
+                                <div class="mb-3">
+                                    <label class="form-label">Image</label><img
+                                        src={{ asset('storage/uploads/category/' . $category->image) }} class="image"
+                                        alt="">
+                                    <input class="form-control @error('images') is-invalid @enderror" name="images"
+                                        type="file" id="images">
+                                    @error('images')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                                 <div class="text-right mt-3">
                                     <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                                 </div>

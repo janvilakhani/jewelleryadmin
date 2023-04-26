@@ -35,6 +35,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Category Name</th>
+                                <th>Image</th>
 
                                 <th width="100px">Action</th>
                             </tr>
@@ -61,8 +62,12 @@
                         name: 'DT_RowIndex'
                     },
                     {
-                        data: 'Category Name',
-                        name: 'category_name'
+                        data: 'category_name',
+                        name: ' Category_name'
+                    },
+                    {
+                        data: 'image',
+                        name: 'Image'
                     },
 
                     {

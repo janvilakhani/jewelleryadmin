@@ -33,8 +33,8 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Booking Services </span>
+                <a class="sidebar-link" href="{{ route('banner.index') }}">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Banner </span>
                 </a>
             </li>
         </ul>
