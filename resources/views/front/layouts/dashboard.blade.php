@@ -1,282 +1,340 @@
 @extends('front.main')
 @section('content')
-    <div id="pwe-main">
-        <!-- Slider -->
-        <aside id="pwe-hero" class="js-fullheight">
-            <div class="flexslider js-fullheight">
-                <ul class="slides">
-                    <li style="background-image: url(assets/front/images/slider/01.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 js-fullheight slider-text">
-                                    <div class="slider-text-inner">
-                                        <div class="desc">
-                                            <h6>dream wedding</h6>
-                                            <h1>To Know Us is to Love Us!</h1>
-                                            <p>We would love to meet up and chat about how we can make YOUR DREAM wedding
-                                                happen!</p>
-                                            <div class="btn-contact"><a href="https://1.envato.market/9X1Ry"
-                                                    target="_blank"><span>Buy Now</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url(assets/front/images/slider/02.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 js-fullheight slider-text">
-                                    <div class="slider-text-inner">
-                                        <div class="desc">
-                                            <h6>dream maker</h6>
-                                            <h1>Your Personal Dream Maker</h1>
-                                            <p>We believe that it is all about the BIG DREAMS and the small details!</p>
-                                            <div class="btn-contact"><a href="https://1.envato.market/9X1Ry"
-                                                    target="_blank"><span>Buy Now</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li style="background-image: url(assets/front/images/slider/03.jpg);">
-                        <div class="overlay"></div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 js-fullheight slider-text">
-                                    <div class="slider-text-inner">
-                                        <div class="desc">
-                                            <h6>planing dream</h6>
-                                            <h1>Destination Wedding Planner</h1>
-                                            <p>No matter your dreams - we can assist you in planning your PWE WEDDINGS &
-                                                EVENTS.</p>
-                                            <div class="btn-contact"><a href="https://1.envato.market/9X1Ry"
-                                                    target="_blank"><span>Buy Now</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+<!-- Hero Session Start  -->
+<div class="main-banner main-banner-bg">
+    <div class="container-fluid">
+      <div class="row align-items-center mt-5">
+        <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="banner-text-area mt-5">
+            <h6 class="mt-5">WELCOME TO ANWA!</h6>
+            <div class="wow fadeInDown" data-wow-duration="3s" data-wow-delay=".2s">
+              <h1 class="ani1">
+                Looking For Deep Cleaning For Your Home
+              </h1>
             </div>
-        </aside>
-        <!-- Services -->
-        <div class="services-section services clear pt-90 pb-90">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 mb-30"> <span class="heading-meta">weddings . events</span>
-                        <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Our Services</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/1.jpg" alt=""> </div>
-                                <div class="con">
-                                    <span class="category">
-                                        <a href="services-page.html">. weddings</a>
-                                    </span>
-                                    <h5><a href="services-page.html">WEDDING PLANNER</a></h5>
-                                    <a href="services-page.html"><i class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/2.jpg" alt=""> </div>
-                                <div class="con"> <span class="category">
-                                        <a href="services-page.html">. weddings</a>
-                                    </span>
-                                    <h5><a href="services-page.html">MASTER OF CEREMONIES</a></h5> <a
-                                        href="services-page.html"><i class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/4.jpg" alt=""> </div>
-                                <div class="con"> <span class="category">
-                                        <a href="services-page.html">. events</a>
-                                    </span>
-                                    <h5><a href="services-page.html">SPECIAL EVENTS</a></h5> <a href="services-page.html"><i
-                                            class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/3.jpg" alt=""> </div>
-                                <div class="con"> <span class="category">
-                                        <a href="services-page.html">. weddings</a>
-                                    </span>
-                                    <h5><a href="services-page.html">DESTINATION WEDDING</a></h5> <a
-                                        href="services-page.html"><i class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/5.jpg" alt=""> </div>
-                                <div class="con"> <span class="category">
-                                        <a href="services-page.html">. events</a>
-                                    </span>
-                                    <h5><a href="services-page.html">BIRTHDAY PARTY PLANNER</a></h5> <a
-                                        href="services-page.html"><i class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="position-re o-hidden"> <img src="images/services/6.jpg" alt=""> </div>
-                                <div class="con"> <span class="category">
-                                        <a href="services-page.html">. events</a>
-                                    </span>
-                                    <h5><a href="services-page.html">CORPORATE EVENTS</a></h5> <a
-                                        href="services-page.html"><i class="ti-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+              Phasellus hendrerit. nibh nec urna. In nisi neque, aliquet vel,
+              dapibus id dolor sit amet.
+            </p>
+            <a class="default-button" href="category.html"><span>Our Services</span></a>
+          </div>
         </div>
-        <!-- Testiominals -->
-        <div class="testiominal-section pt-90 pb-90 testimonials bg-img bg-fixed" data-overlay-dark="5"
-            data-background="images/banner.jpg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="section-head col-md-5"> <span>testiominals</span>
-                        <h4>From our clients</h4>
-                        <p>We are always eager to hear your opinion and share your experience. Here you can find some of
-                            our affectionate customers opinions.</p>
-                    </div>
-                    <div class="owl-carousel owl-theme col-md-7">
-                        <div class="item-box"> <span class="quote">
-                                <img src="images/quot.png" alt="">
-                            </span>
-                            <p>I had no idea about all the things I had to do to get married / things I needed to think
-                                about. Rachel explained everything to me and guided me through the whole process with
-                                enthusiasm and patience. She was wonderful to work with! I couldn’t have been happier with
-                                her services and upbeat personality!</p>
-                            <div class="info">
-                                <div class="author-img"> <img src="images/team/05.jpg" alt=""> </div>
-                                <div class="cont">
-                                    <h6>Fredia & Pablo</h6> <span>April 15, 2022 USA</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-box"> <span class="quote">
-                                <img src="images/quot.png" alt="">
-                            </span>
-                            <p>I had no idea about all the things I had to do to get married / things I needed to think
-                                about. Rachel explained everything to me and guided me through the whole process with
-                                enthusiasm and patience. She was wonderful to work with! I couldn’t have been happier with
-                                her services and upbeat personality!</p>
-                            <div class="info">
-                                <div class="author-img"> <img src="images/team/06.jpg" alt=""> </div>
-                                <div class="cont">
-                                    <h6>Olivia & Enrico</h6> <span>April 13, 2022 CA</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-box"> <span class="quote">
-                                <img src="images/quot.png" alt="">
-                            </span>
-                            <p>I had no idea about all the things I had to do to get married / things I needed to think
-                                about. Rachel explained everything to me and guided me through the whole process with
-                                enthusiasm and patience. She was wonderful to work with! I couldn’t have been happier with
-                                her services and upbeat personality!</p>
-                            <div class="info">
-                                <div class="author-img"> <img src="images/team/07.jpg" alt=""> </div>
-                                <div class="cont">
-                                    <h6>Tammy & Matthew</h6> <span>April 11, 2022 USA</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Session End -->
+
+  <!-- New Arrival Start -->
+  <div class="new-arrival all-mg">
+    <div class="container-fluid">
+      <!-- Section tittle -->
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-10">
+          <div class="section-tittle mb-20 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+            <h2>New Arrival</h2>
+          </div>
         </div>
-        <!-- Blog -->
-        <div class="blog-section blog pt-90 pb-90">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 mb-30"> <span class="heading-meta">read news</span>
-                        <h2 class="pwe-heading animate-box" data-animate-effect="fadeInLeft">Latest News</h2>
+      </div>
+
+      <div class="popular-items pt-50">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
+                    data-wow-delay=".1s">
+                    <div class="popular-img">
+                      <img src="{{asset('front/assets/images/Home/new arival/german-silver-pearl-earrings-500x500.webp')}}" alt="" />
+                      <div class="img-cap">
+                        <span>Glasses</span>
+                      </div>
+                      <div class="favorit-items">
+                        <a href="category.html" class="btn2">Shop Now</a>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="item mb-30 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="post-img"> <img src="assets/front/images/blog/2.jpg" alt="">
-                                <div class="date">
-                                    <a href="post.html"> <span>Apr</span> <i>02</i> </a>
-                                </div>
-                            </div>
-                            <div class="content"> <span class="tag">
-                                    <a href="blog.html">Wedding</a>
-                                </span>
-                                <h5><a href="post.html">Crush Your Wedding Day Style!</a></h5>
-                                <p>Quality fusce suscipit the conce viviense ante a hendrerit ullamcor risus nise the
-                                    cursus purus sit amet viverra.</p>
-                            </div>
-                        </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
+                    data-wow-delay=".1s">
+                    <div class="popular-img">
+                      <img src="{{asset('front/assets/images/Home/new arival/pexels-dima-valkov-3266700.jpg')}}" alt="" />
+                      <div class="img-cap">
+                        <span>Glasses</span>
+                      </div>
+                      <div class="favorit-items">
+                        <a href="category.html" class="btn2">Shop Now</a>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="item mb-30 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="post-img"> <img src="assets/front/images/blog/3.jpg" alt="">
-                                <div class="date">
-                                    <a href="post.html"> <span>Apr</span> <i>04</i> </a>
-                                </div>
-                            </div>
-                            <div class="content"> <span class="tag">
-                                    <a href="post.html">Wedding</a>
-                                </span>
-                                <h5><a href="post.html">How to be the best bridesmaid ever!</a></h5>
-                                <p>Quality fusce suscipit the conce viviense ante a hendrerit ullamcor risus nise the
-                                    cursus purus sit amet viverra.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="item mb-30 animate-box" data-animate-effect="fadeInLeft">
-                            <div class="post-img"> <img src="assets/front/images/blog/1.jpg" alt="">
-                                <div class="date">
-                                    <a href="post.html"> <span>Apr</span> <i>08</i> </a>
-                                </div>
-                            </div>
-                            <div class="content"> <span class="tag">
-                                    <a href="blog.html">Hairstyle</a>
-                                </span>
-                                <h5><a href="post.html">15 Best Bridal Hairstyles Ever</a></h5>
-                                <p>Quality fusce suscipit the conce viviense ante a hendrerit ullamcor risus nise the
-                                    cursus purus sit amet viverra.</p>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
+                    data-wow-delay=".4s">
+                    <div class="popular-img">
+                      <img src="{{asset('front/assets/images/Home/new arival/n1.png')}}" alt="" />
+                      <div class="img-cap">
+                        <span>Jackets</span>
+                      </div>
+                      <div class="favorit-items">
+                        <a href="category.html" class="btn2">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
+                    data-wow-delay=".6s">
+                    <div class="popular-img">
+                      <img src="{{asset('front/assets/images/Home/new arival/il_fullxfull.2200656932_k090.jpg')}}" alt="" />
+                      <div class="img-cap">
+                        <span>Clothes</span>
+                      </div>
+                      <div class="favorit-items">
+                        <a href="category.html" class="btn2">Shop Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <!-- Clients -->
-        <div class="clients-section clients">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 owl-carousel owl-theme">
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/1.jpg" alt=""></a>
-                        </div>
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/2.jpg" alt=""></a>
-                        </div>
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/3.jpg" alt=""></a>
-                        </div>
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/4.jpg" alt=""></a>
-                        </div>
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/5.jpg" alt=""></a>
-                        </div>
-                        <div class="client-logo">
-                            <a href="#"><img src="assets/front/images/clients/6.jpg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-7 text-center">
+              <div class="">
+                <video autoplay style="width: 100%;" muted loop>
+                  <source src="{{asset('front/assets/images/Home/vidyo/video.mp4')}}" type="video/mp4" />
+                </video>
+              </div>
             </div>
+          </div>
         </div>
-    @endsection
+      </div>
+    </div>
+  </div>
+  <!-- New Arrival End -->
+
+  <!--Collection Start -->
+  <section class="Nn collection section-bg2 section-padding30 section-over1 ml-15 mr-15"
+    style="background: url({{asset('front/assets/images/Home/banner/banner2.png')}})">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9">
+          <div class="single-question text-center">
+            <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">collection houses our
+              first-ever</h2>
+            <a href="category.html" class="btn2 class=" wow fadeInUp" data-wow-duration="2s"
+              data-wow-delay=".4s">About
+              Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Collection End -->
+
+  <!-- Portfolio Start -->
+  <div class="portfolio shape-bg ptb-100">
+    <div class="container">
+      <div class="default-section-title">
+        <h6>OUR PORTFOLIO</h6>
+        <h3>We Provide Best Service</h3>
+      </div>
+      <div class="section-content">
+        <div class="portfolio-slider-area owl-carousel">
+          <div class="portfolio-card">
+            <img src="{{asset('front/assets/images/Home/silder/d1.png')}}" alt="image">
+            <div class="portfolio-text">
+              <p>Office Cleaning</p>
+              <h4><a href="service-details.html">Commercial Office</a></h4>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img src="{{asset('front/assets/images/Home/silder/k1.png')}}" alt="image">
+            <div class="portfolio-text">
+              <p>Industrial Cleaning</p>
+              <h4><a href="service-details.html">Manufacturing Floor</a></h4>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img src="{{asset('front/assets/images/Home/silder/n1.png')}}" alt="image">
+            <div class="portfolio-text">
+              <p>Garage Cleaning</p>
+              <h4><a href="service-details.html">Home Garage</a></h4>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img src="{{asset('front/assets/images/Home/silder/r1.png')}}" alt="image">
+            <div class="portfolio-text">
+              <p>Room Cleaning</p>
+              <h4><a href="service-details.html">Floor Cleaning</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio End -->
+
+  <!-- Popular Locations Start 01-->
+  <div class="popular-back-img">
+    <div class="popular-product pt-50 all-mg">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-7 col-sm-12 py-4" style="padding-left: 0px;">
+            <div class="single-product mb-50">
+              <div class="location-img" style="box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;">
+                <img src="{{asset('front/assets/images/Home/pop/14.jpg')}}" alt="" class="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-12 py-4 d-flex align-items-center">
+            <div class="single-product mb-50 d-flex justify-content-center position-relative w-100">
+              <div class="align-content-center align-items-center">
+                <div class="location-img text-center">
+                  <h1>Lorem, ipsum dolor.</h1>
+                  <a href="category.html" class="btn2 mt-3">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-7 col-sm-12 py-4" style="padding-right: 0px;">
+            <div class="single-product mb-50">
+              <div class="location-img" style="box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;">
+                <img src="{{asset('front/assets/images/Home/pop/15.jpg')}}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Popular Locations End -->
+
+  <!-- Teem Start -->
+  <div class="team bg-f9faff ptb-100">
+    <div class="container">
+      <div class="default-section-title default-section-title-middle">
+        <h6>OUR TEAM</h6>
+        <h3>Our Leadership Team</h3>
+      </div>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="team-card">
+              <img src="{{asset('front/assets/images/Home/silder/k1.png')}}" alt="image">
+              <div class="team-text-area">
+                <h4>Sophia Arther</h4>
+                <p>Financial Officer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="team-card">
+              <img src="{{asset('front/assets/images/Home/silder/n1.png')}}" alt="image">
+              <div class="team-text-area">
+                <h4>Michel Gery</h4>
+                <p>Customer Officer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="team-card">
+              <img src="{{asset('front/assets/images/Home/silder/r1.png')}}" alt="image">
+              <div class="team-text-area">
+                <h4>Pery Henry</h4>
+                <p>Financial Officer</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="team-card">
+              <img src="{{asset('front/assets/images/Home/silder/d1.png')}}" alt="image">
+              <div class="team-text-area">
+                <h4>Milton Hence</h4>
+                <p>Staff Officer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Teem End -->
+
+  <!-- Silder Start -->
+  <div class="Slider ptb-100">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="slider-card">
+            <div class="card ptb-70">
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 d-flex justify-content-center">
+                    <img src="{{asset('front/assets/images/Category/1.png')}}" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <h1>Rushabh Nada</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis rerum iure hic
+                      consectetur. Eveniet, fuga eos earum amet ullam optio magni unde officia quis fugiat vero
+                      repudiandae vel possimus!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slider-card">
+            <div class="card ptb-70">
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 d-flex justify-content-center">
+                    <img src="{{asset('front/assets/images/Category/1.png')}}" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <h1>Rushabh Nada</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis rerum iure hic
+                      consectetur. Eveniet, fuga eos earum amet ullam optio magni unde officia quis fugiat vero
+                      repudiandae vel possimus!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slider-card">
+            <div class="card ptb-70">
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 d-flex justify-content-center">
+                    <img src="{{asset('front/assets/images/Category/1.png')}}" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <h1>Rushabh Nada</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis rerum iure hic
+                      consectetur. Eveniet, fuga eos earum amet ullam optio magni unde officia quis fugiat vero
+                      repudiandae vel possimus!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- Silder End -->
+
+@endsection

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
 use GuzzleHttp\Middleware;
@@ -19,10 +20,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 Route::get('/', function () {
     return view('front.layouts.dashboard');
 });
-Auth::routes();
+Route::get('about', [FrontController::class, 'getAbout'])->name('front.about');
+Route::get('contact-us', [FrontController::class, 'getContact'])->name('front.contact');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
 

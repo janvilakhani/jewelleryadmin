@@ -1,45 +1,135 @@
-<div id="pwe-footer2">
-    <div class="pwe-narrow-content">
-        <div class="row">
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <h2>
-                    <a href="index.html">PWE<i>®</i><span>weddings <small>•</small> events</span></a>
-                </h2>
-                <div class="social"> <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i
-                            class="ti-twitter-alt"></i></a> <a href="#"><i class="ti-instagram"></i></a> <a
-                        href="#"><i class="ti-pinterest"></i></a> </div>
+ <!-- Footer Start -->
+ <footer>
+    <div class="footer footer-2 pt-100 pb-5 Footer-img">
+      <div class="" style="margin: 0 35PX;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="footer-logo-area">
+                <a href="index.html"><img src="{{asset('front/assets/images/2 (2).png')}}" alt="image" width="50%"></a>
+                <div class="footer-social-icons">
+                  <span>Follow Us:</span>
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <h6>Ring</h6>
-                <p>+1.123.444.0000</p>
-                <h6>Write</h6>
-                <p>info@pweddings.com</p>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="footer-links footer-contact-list">
+                <h3>Get In Touch</h3>
+                <div class="footer-content-card">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <h5>Location:</h5>
+                  <p><a href="https://goo.gl/maps/LFFvE4dNnyq67gGeA">2976 Sunrise Avenue, Las Vegas</a></p>
+                </div>
+                <div class="footer-content-card">
+                  <i class="fas fa-envelope"></i>
+                  <h5>Email:</h5>
+                  <p><a
+                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#e99a9c9999869b9da988879e88c78a8684"><span
+                        class="__cf_email__"
+                        data-cfemail="d5a6a0a5a5baa7a195b4bba2b4fbb6bab8">[email&#160;protected]</span></a>
+                  </p>
+                </div>
+                <div class="footer-content-card">
+                  <i class="fas fa-mobile-alt"></i>
+                  <h5>Phone:</h5>
+                  <p><a href="tel:+13454567877">+1-3454-5678-77</a></p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <h6>Address</h6>
-                <p>Wallaway 5st St Normain
-                    <br />New York, USA. 98499
-                </p>
-                <p class="copyright">&copy; 2022. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- jQuery -->
-<script src="{{ asset('assets/front/js/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/modernizr-2.6.2.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/jquery.easing.1.3.js') }}"></script>
-<script src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/jquery.waypoints.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/jquery.flexslider-min.js') }}"></script>
-<script src="{{ asset('assets/front/js/sticky-kit.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/front/js/main.js') }}"></script>
-</div>
-</body>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="footer-links footer-quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="{{route('front.about')}}" target="_blank"><i class="fas fa-angle-right"></i>
+                      <span>About</span></a></li>
 
-<!-- Mirrored from duruthemes.com/demo/html/pwe/multipage/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 13:02:15 GMT -->
+                  <li><a href="{{route('front.contact')}}" target="_blank"><i class="fas fa-angle-right"></i>
+                      <span>Contact</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="footer-links footer-newsletter">
+                <h3>Subscribe</h3>
+                <p>Subscribe To Our Newsletter To Get Our Update News!</p>
+                <form>
+                  <input type="text" class="form-control" placeholder="Your Email" style="font-size: 16px;">
+                  <button class="default-button2" type="submit"><span>Send</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <p>Copyright @
+              <script data-cfasync="false"
+                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+              <script>document.write(new Date().getFullYear())</script>. <strong>Anwa</strong> All Rights Reserved By
+              <a target="_blank" href="https://hibootstrap.com/">HiBootstrap</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- WhatsApp Icon -->
+  <div class="go-top"><img src="{{asset('front/assets/images/wp.gif')}}" alt="" /></div>
+
+  <!-- JavaScript Here  -->
+  <script src="{{asset('front/assets/js/jquery-3.6.0.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/meanmenu.js')}}"></script>
+  <script src="{{asset('front/assets/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/jquery.nice-select.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/form-validator.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/contact-form-script.js')}}"></script>
+  <script src="{{asset('front/assets/js/appear.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/TweenMax.js')}}"></script>
+  <script src="{{asset('front/assets/js/odometer.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/jquery.barfiller.js')}}"></script>
+  <script src="{{asset('front/assets/js/wow.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/custom.js')}}"></script>
+
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{asset('front/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/jquery.slicknav.min.js')}}"></script>
+  <script src="{{asset('front/assets/js/main.js')}}"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  </script>
+</body>
 
 </html>
