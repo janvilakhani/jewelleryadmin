@@ -21,9 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-Route::get('/', function () {
-    return view('front.layouts.dashboard');
-});
+
+Route::get('/', [FrontController::class, 'getDashboard'])->name('front.index');
 Route::get('about', [FrontController::class, 'getAbout'])->name('front.about');
 Route::get('contact-us', [FrontController::class, 'getContact'])->name('front.contact');
 

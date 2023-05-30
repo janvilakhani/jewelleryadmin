@@ -20,8 +20,8 @@ class BannerController extends Controller
 
                 ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('banner.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('banner.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+                    $btn = '<a href="' . route('admin.banner.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+                           <a href="' . route('admin.banner.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
                            ';
 
                     return $btn;
@@ -45,9 +45,10 @@ class BannerController extends Controller
     {
 
         $validated = $request->validate([
-            'banner_name' => 'required',
+            'title' => 'required',
+            'url' => 'required',
+            'sub_title' => 'required',
             'images' => 'required',
-
         ]);
         $file = $validated['images'];
         $fileName = $file->getClientOriginalName();

@@ -24,8 +24,8 @@ class SubCategoryController extends Controller
                 })
                 ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('subcategory.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('subcategory.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+                    $btn = '<a href="' . route('admin.subcategory.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+                           <a href="' . route('admin.subcategory.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
                            ';
 
                     return $btn;

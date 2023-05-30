@@ -854,7 +854,7 @@ Index 01 Hero Area CSS
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/Home/banner/main-banner.png");
+  /* background-image: url("../images/Home/banner/main-banner.png"); */
   /* position: relative; */
   overflow: hidden;
   width: 100%;
@@ -2019,7 +2019,7 @@ Index 01 Footer Area CSS
   padding: 10px 30px;
 }
 
-/*================================================ 
+/*================================================
 CopyRight Footer Area CSS
 =================================================*/
 .copyright {

@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Image</label><img
-                                        src={{ asset('storage/uploads/category/' . $category->image) }} class="image"
+                                        src="{{ asset('storage/uploads/category/'. $category->image) }}" class="image"
                                         alt="">
                                     <input class="form-control @error('images') is-invalid @enderror" name="images"
                                         type="file" id="images">

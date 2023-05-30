@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('sub_categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id')->unsigned();
+            $table->integer('category_id')->nullable()->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->string('subcat_name');
-            $table->string('image');
+            $table->string('subcat_name')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

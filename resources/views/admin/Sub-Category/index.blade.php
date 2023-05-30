@@ -68,7 +68,7 @@
                     },
                     {
                         data: 'subcat_name',
-                        name: 'SubCate. Name'
+                        name: 'SubCate Name'
                     },
                     {
                         data: 'image',

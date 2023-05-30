@@ -20,8 +20,8 @@ class CategoryController extends Controller
 
                 ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('category.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('category.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+                    $btn = '<a href="' . route('admin.category.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+                           <a href="' . route('admin.category.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
                            ';
 
                     return $btn;

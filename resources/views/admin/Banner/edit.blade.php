@@ -21,11 +21,33 @@
                                 @method('put')
                                 @csrf
                                 <div class="mb-3">
-                                    <label class="form-label">Banner Name</label>
-                                    <input class="form-control form-control-lg @error('banner_name') is-invalid @enderror"
-                                        type="text" name="banner_name" placeholder="Enter Category Name"
-                                        value="{{ $banner->banner_name }}">
-                                    @error('banner_name')
+                                    <label class="form-label">Title</label>
+                                    <input class="form-control form-control-lg @error('title') is-invalid @enderror"
+                                        type="text" name="title" placeholder="Enter Title Name"
+                                        value="{{ $banner->title }}">
+                                    @error('title')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Sub Title</label>
+                                    <input class="form-control form-control-lg @error('sub_title') is-invalid @enderror"
+                                        type="text" name="sub_title" placeholder="Enter Sub Title Name"
+                                        value="{{ $banner->sub_title }}">
+                                    @error('sub_title')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Url</label>
+                                    <input class="form-control form-control-lg @error('url') is-invalid @enderror"
+                                        type="text" name="url" placeholder="Enter Url"
+                                        value="{{ $banner->title }}">
+                                    @error('url')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

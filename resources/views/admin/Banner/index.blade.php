@@ -34,7 +34,9 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Banner Name</th>
+                                <th>Title</th>
+                                <th>Sub Title</th>
+                                <th>Url</th>
                                 <th>Image</th>
 
                                 <th width="100px">Action</th>
@@ -62,14 +64,21 @@
                         name: 'DT_RowIndex'
                     },
                     {
-                        data: 'banner_name',
+                        data: 'title',
                         name: 'Banner Name'
+                    },
+                    {
+                        data: 'sub_title',
+                        name: 'Sub Title'
+                    },
+                    {
+                        data: 'url',
+                        name: 'Url'
                     },
                     {
                         data: 'image',
                         name: 'Image'
                     },
-
                     {
                         data: 'action',
                         name: 'action',

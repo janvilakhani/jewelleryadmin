@@ -1,7 +1,7 @@
 @extends('front.main')
 @section('content')
 <!-- Hero Session Start  -->
-<div class="main-banner main-banner-bg">
+<div class="main-banner main-banner-bg" style=" background-image: url({{$url}})">
     <div class="container-fluid">
       <div class="row align-items-center mt-5">
         <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -9,15 +9,14 @@
             <h6 class="mt-5">WELCOME TO ANWA!</h6>
             <div class="wow fadeInDown" data-wow-duration="3s" data-wow-delay=".2s">
               <h1 class="ani1">
-                Looking For Deep Cleaning For Your Home
+                {{$banner->title}}
               </h1>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-              Phasellus hendrerit. nibh nec urna. In nisi neque, aliquet vel,
-              dapibus id dolor sit amet.
+                {{$banner->sub_title}}
+
             </p>
-            <a class="default-button" href="category.html"><span>Our Services</span></a>
+            <a class="default-button" href="{{$banner->url}}"><span>Shop Now</span></a>
           </div>
         </div>
       </div>
@@ -42,13 +41,14 @@
           <div class="row">
             <div class="col-lg-5">
               <div class="row">
+                @foreach ($newArrival as $new)
                 <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
                     data-wow-delay=".1s">
                     <div class="popular-img">
                       <img src="{{asset('front/assets/images/Home/new arival/german-silver-pearl-earrings-500x500.webp')}}" alt="" />
                       <div class="img-cap">
-                        <span>Glasses</span>
+                        {{-- <span>{{$new->}}</span> --}}
                       </div>
                       <div class="favorit-items">
                         <a href="category.html" class="btn2">Shop Now</a>
@@ -56,7 +56,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                @endforeach
+           {{--      <div class="col-lg-6 col-md-6 col-sm-6">
                   <div class="single-popular-items text-center wow fadeInUp" data-wow-duration="1s"
                     data-wow-delay=".1s">
                     <div class="popular-img">
@@ -98,7 +99,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
               </div>
             </div>
             <div class="col-lg-7 text-center">
