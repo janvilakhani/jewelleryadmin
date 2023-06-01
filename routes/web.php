@@ -4,6 +4,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SubCategoryController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
@@ -56,13 +57,20 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::get('product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
     Route::put('product/update/{id}', [ProductController::class, 'update'])->name('product.update');
-    /*  BANNER */
 
+
+    /*  BANNER */
     Route::get('banner/index', [BannerController::class, 'index'])->name('banner.index');
     Route::get('banner/create', [BannerController::class, 'create'])->name('banner.create');
     Route::post('banner/store', [BannerController::class, 'store'])->name('banner.store');
     Route::get('banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
     Route::get('banner/delete/{id}', [BannerController::class, 'delete'])->name('banner.delete');
     Route::put('banner/update/{id}', [BannerController::class, 'update'])->name('banner.update');
+
+    /*  REview */
+    Route::get('review/index', [ReviewController::class, 'index'])->name('review.index');
+    Route::get('review/create', [ReviewController::class, 'create'])->name('review.create');
+    Route::post('review/store', [ReviewController::class, 'store'])->name('review.store');
+
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -14,8 +14,8 @@ class FrontController extends Controller
     {
         $banner=Banner::get()->first();
         $newArrival=SubCategory::inRandomOrder()->limit(4)->get();
-        $url=asset('storage/uploads/banner/'.$banner->image);
-        return view('front.layouts.dashboard',compact('banner','url','newArrival'));
+        // $url=asset('storage/uploads/banner/'.$banner->image);
+        return view('front.layouts.dashboard',compact('banner','newArrival'));
 
     }
     public function getAbout()

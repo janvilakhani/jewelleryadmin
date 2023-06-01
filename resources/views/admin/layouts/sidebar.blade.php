@@ -37,6 +37,11 @@
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Banner </span>
                 </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{ route('admin.review.index') }}">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Review</span>
+                </a>
+            </li>
         </ul>
 
     </div>
