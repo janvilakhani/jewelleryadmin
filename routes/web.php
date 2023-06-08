@@ -76,5 +76,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('review/create', [ReviewController::class, 'create'])->name('review.create');
     Route::post('review/store', [ReviewController::class, 'store'])->name('review.store');
 
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
