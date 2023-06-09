@@ -12,30 +12,30 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
 
-        if ($request->ajax()) {
+
             $data = Category::all();
-            return DataTables::of($data)
-                ->addIndexColumn()
+        //     return DataTables::of($data)
+        //         ->addIndexColumn()
 
 
-                ->addColumn('action', function ($row) {
+        //         ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('admin.category.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('admin.category.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
-                           ';
+        //             $btn = '<a href="' . route('admin.category.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+        //                    <a href="' . route('admin.category.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+        //                    ';
 
-                    return $btn;
-                })
-                ->addColumn('image', function ($row) {
+        //             return $btn;
+        //         })
+        //         ->addColumn('image', function ($row) {
 
-                    return '<img src="' . asset('storage/uploads/category/' . $row->image) . '"  class="image"/>';
-                })
-                ->rawColumns(['action', 'image'])
-                ->make(true);
-        }
+        //             return '<img src="' . asset('storage/uploads/category/' . $row->image) . '"  class="image"/>';
+        //         })
+        //         ->rawColumns(['action', 'image'])
+        //         ->make(true);
 
 
-        return view('admin.Category.index');
+
+        return view('admin.Category.index',compact('data'));
     }
     public function create()
     {
@@ -81,7 +81,7 @@ class CategoryController extends Controller
         }
         $category->update($request->all());
         toastr()->success('Category Edited successfully..!');
-        return redirect()->back();
+        return redirect()->route('admin.category.index');
     }
     public function delete($id)
     {
