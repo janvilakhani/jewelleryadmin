@@ -63,8 +63,9 @@ License: For each use you must have a valid license purchased only from above li
 
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    {{-- <script src="js/custom.js" type="text/javascript"></script> --}}
     @yield('custom_script')
     <!--begin::Javascript-->
     <!--begin::Global Javascript Bundle(used by all pages)-->

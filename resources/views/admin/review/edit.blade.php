@@ -17,7 +17,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
 
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Edit SubCategory</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Edit Review</h1>
                 </div>
                 <!--end::Page title-->
                 <!--begin::Actions-->
@@ -60,22 +60,40 @@
                 <!--begin::Card body-->
                 <div class="card-body pt-0">
                     <!--begin::Table-->
-                    <form method="post" action="{{ route('admin.subcategory.update', $res->id) }}"
+                    {{-- <form method="post" action="{{ route('admin.review.update', $res->id) }}"
                         enctype="multipart/form-data">
                         @method('put')
                         @csrf
+
+                        <div class="text-right mt-3">
+                            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                        </div>
+                    </form> --}}
+                    <form method="post" action="{{ route('admin.review.update',$review->id) }}" enctype="multipart/form-data">
+                        @method('put')
+                        @csrf
                         <div class="mb-3">
-                            <label class="form-label">Category name</label>
+                            <label class="form-label"style="margin-top:10px">User Name</label>
+                            <input class="form-control form-control-lg @error('name') is-invalid @enderror"
+                                type="text" name="name" placeholder="Enter User Name" value="{{$review->name}}">
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="margin-top:10px">Select Review</label>
 
-                            <select class="form-select mb-3 @error('category_id') is-invalid @enderror"
-                                name="category_id">
-                                <option selected value="{{ $cate->id }}"> {{ $cate->category_name }}
-                                </option>
+                            <select class="form-select mb-3 @error('star') is-invalid @enderror"
+                                name="star">
+                                    <option selected value="">{{$review->star}}</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
 
-                                @foreach ($result as $re)
-                                    <option value="{{ $re->id }}">{{ $re->category_name }}
-                                    </option>
-                                @endforeach
                             </select>
 
                             @error('category_id')
@@ -85,22 +103,21 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Sub-Category Name</label>
-                            <input class="form-control form-control-lg @error('subcat_name') is-invalid @enderror"
-                                type="text" name="subcat_name" placeholder="Enter Category Name"
-                                value="{{ $res->subcat_name }}">
-                            @error('subcat_name')
+                            <label class="form-label"style="margin-top:10px">Review</label>
+                            <textarea class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" placeholder="Review" value="">{{$review->description}}</textarea>
+                            @error('description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Image:-</label>
-                            <img src={{ asset('storage/uploads/subcategory/' . $res->image) }} class="image"
-                                alt="">
+                            <label class="form-label">Image</label>
+                            <img
+                                src={{ asset('storage/uploads/review/' . $review->image) }} class="image"
+                                alt=""  width="80" height="80">
                             <input class="form-control @error('images') is-invalid @enderror" name="images"
-                                type="file" id="images">
+                                type="file" id="images" style="margin-top: 10px">
                             @error('images')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

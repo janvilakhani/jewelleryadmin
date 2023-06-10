@@ -12,82 +12,117 @@
     </style>
 @endsection
 @section('content')
-    <div class="container-fluid p-0">
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 
-        <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">All Photos</h1>
-        </div>
-        <div class="card">
-            <div class="card-header text-right">
-                <a class="btn btn-primary" href="{{ route('admin.banner.create') }}"><svg xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-plus-circle align-middle me-2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="16"></line>
-                        <line x1="8" y1="12" x2="16" y2="12"></line>
-                    </svg> Add</a>
+        <div id="kt_content_container" class="container-xxl">
+
+            <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack p-0">
+                <!--begin::Page title-->
+                <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Banner List</h1>
+                </div>
+                <!--end::Page title-->
+                <!--begin::Actions-->
+                <div class="d-flex align-items-center py-1">
+
+                    <!--begin::Button-->
+                    <a class="btn btn-primary" href="{{ route('admin.banner.create') }}">Add Banner</a>
+
+                    <!--end::Button-->
+                </div>
+                <!--end::Actions-->
             </div>
-            <div class="card-body">
-                <div class="row">
-                    <table class="table table-bordered data-table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Title</th>
-                                <th>Sub Title</th>
-                                <th>Url</th>
-                                <th>Image</th>
+            <div class="row mt-5">
+                <div class="col-sm">
+                    <div class="alert alert-success" role="alert" id="alert-success" style="display:none">
 
-                                <th width="100px">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    </div>
+                    @if (Session::has('success'))
+                        <div class="alert alert-success" id="sessionmsg">
+                            {{ Session::get('success') }}
+                        </div>
+                    @elseif(Session::has('warning'))
+                        {{ Session::get('warning') }}
+                    @endif
+
                 </div>
             </div>
+            <div class="card">
+
+                <div class="card-body pt-0">
+                    <div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                        <div class="table-responsive">
+                            <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+                                <thead>
+                                    <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
+                                        <th>No</th>
+                                        <th>Banner Name</th>
+                                        <th>Sub Title</th>
+                                        <th>Url</th>
+                                        <th>Image</th>
+                                        <th width="100px">Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="fw-bold text-gray-600">
+                                    @foreach ($banners as $data)
+                                        <tr>
+                                            <td>
+                                                {{ $data->id }}
+                                            </td>
+                                            <td>
+                                                {{ $data->title }}
+                                            </td>
+                                            <td>
+                                                {{ $data->sub_title }}
+                                            </td>
+                                            <td>
+                                                {{ $data->url }}
+                                            </td>
+                                            <td>
+                                                <img src={{ asset('storage/uploads/banner/'.$data->image) }}
+                                                    class="image" width="80" height="80" alt="{{$data->image}}"/>
+
+                                            </td>
+
+                                            <td class="text-end">
+
+                                                <a class="btn btn-primary"
+                                                    href="{{ route('admin.banner.edit', $data->id) }}">
+
+                                                    <i class='fas fa-edit'></i>
+                                                </a>
+
+                                                {{-- <a href="{{ route('admin.category.delete', $data->id) }}"
+                                                onclick="return confirm('Are you sure to delete?')"
+                                                class=" px-3 btn btn-danger  btn-icon flex-shrink-0">
+                                                <i class='far fa-trash-alt'></i></a> --}}
+
+                                                {{-- <a href="#delModal"
+                                                class="trigger-btn btn btn-primary btn-icon flex-shrink-0 "
+                                                data-toggle="modal"> <i class='far fa-trash-alt'></i>
+                                            </a> --}}
+                                            </td>
+                                            <!--end::Action=-->
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                                <!--end::Table body-->
+                            </table>
+                            <!--end::Table-->
+                        </div>
+                    </div>
+                    <!--end::Table-->
+                </div>
+                <!--end::Card body-->
+            </div>
+
         </div>
 
     </div>
 @endsection
 @section('custom_script')
-    <script type="text/javascript">
-        $(function() {
-
-            var table = $('.data-table').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('admin.banner.index') }}",
-                columns: [{
-                        data: 'DT_RowIndex',
-                        name: 'DT_RowIndex'
-                    },
-                    {
-                        data: 'title',
-                        name: 'Banner Name'
-                    },
-                    {
-                        data: 'sub_title',
-                        name: 'Sub Title'
-                    },
-                    {
-                        data: 'url',
-                        name: 'Url'
-                    },
-                    {
-                        data: 'image',
-                        name: 'Image'
-                    },
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false
-                    },
-                ]
-            });
-
-        });
-    </script>
 @endsection

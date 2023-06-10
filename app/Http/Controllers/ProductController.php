@@ -13,36 +13,36 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-            $data  = Product::all();
-            // $model = Category::;
-            return DataTables::of($data)
-                ->addIndexColumn()
+        // if ($request->ajax()) {
+        //     $data  = Product::all();
+        //     // $model = Category::;
+        //     return DataTables::of($data)
+        //         ->addIndexColumn()
 
-                ->editColumn('category_id', function ($data) {
-                    return $data->category->category_name;
-                })
-                ->editColumn('subcategory_id', function ($data) {
-                    return $data->subcategory->subcat_name;
-                })
-                ->addColumn('action', function ($row) {
+        //         ->editColumn('category_id', function ($data) {
+        //             return $data->category->category_name;
+        //         })
+        //         ->editColumn('subcategory_id', function ($data) {
+        //             return $data->subcategory->subcat_name;
+        //         })
+        //         ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('product.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('product.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
-                           ';
+        //             $btn = '<a href="' . route('admin.product.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+        //                    <a href="' . route('admin.product.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+        //                    ';
 
-                    return $btn;
-                })
-                ->addColumn('image', function ($row) {
+        //             return $btn;
+        //         })
+        //         ->addColumn('image', function ($row) {
 
-                    return '<img src="' . asset('storage/uploads/product/' . $row->image) . '"  class="image"/>';
-                })
-                ->rawColumns(['action', 'category_id', 'subcategory_id', 'image'])
-                ->make(true);
-        }
+        //             return '<img src="' . asset('storage/uploads/product/' . $row->image) . '"  class="image"/>';
+        //         })
+        //         ->rawColumns(['action', 'category_id', 'subcategory_id', 'image'])
+        //         ->make(true);
+        // }
 
-
-        return view('admin.Product.index');
+            $product=Product::with('category','subcategory')->get();
+        return view('admin.Product.index',compact('product'));
     }
     public function create()
     {

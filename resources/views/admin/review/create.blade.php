@@ -9,7 +9,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
 
-                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Add SubCategory</h1>
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Add Review</h1>
                 </div>
                 <!--end::Page title-->
                 <!--begin::Actions-->
@@ -57,7 +57,7 @@
                         <div class="mb-3">
                             <label class="form-label"style="margin-top:10px">User Name</label>
                             <input class="form-control form-control-lg @error('name') is-invalid @enderror"
-                                type="text" name="name" placeholder="Enter Category Name">
+                                type="text" name="name" placeholder="Enter User Name">
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -84,7 +84,15 @@
                                 </span>
                             @enderror
                         </div>
-
+                        <div class="mb-3">
+                            <label class="form-label"style="margin-top:10px">Review</label>
+                            <textarea class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" placeholder="Review"></textarea>
+                            @error('description')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         <div class="mb-3">
                             <label class="form-label">Image</label>
                             <input class="form-control @error('images') is-invalid @enderror" name="images"

@@ -98,9 +98,9 @@
                         <div class="mb-3">
                             <label class="form-label">Image:-</label>
                             <img src={{ asset('storage/uploads/subcategory/' . $res->image) }} class="image"
-                                alt="">
+                                alt=""  width="80" height="80">
                             <input class="form-control @error('images') is-invalid @enderror" name="images"
-                                type="file" id="images">
+                                type="file" id="images" style="margin-top: 10px">
                             @error('images')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

@@ -20,14 +20,14 @@
             <!--begin::Page title-->
             <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
 
-                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">sub category List</h1>
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Review List</h1>
             </div>
             <!--end::Page title-->
             <!--begin::Actions-->
             <div class="d-flex align-items-center py-1">
 
                 <!--begin::Button-->
-                <a class="btn btn-primary" href="{{ route('admin.subcategory.create') }}">Add SubCategory</a>
+                <a class="btn btn-primary" href="{{ route('admin.review.create') }}">Add Review</a>
 
                 <!--end::Button-->
             </div>
@@ -75,9 +75,9 @@
 
 
                                             <th>No</th>
-                                            <th>Category Name</th>
-                                            <th>SubCat. Name</th>
-                                            <th>Product Name</th>
+                                            <th>Description</th>
+                                            <th>Name	</th>
+                                            <th>star</th>
                                             <th>Image</th>
                                             <th width="100px">Action</th>
 
@@ -86,7 +86,50 @@
                             </thead>
                             <!--end::Table head-->
                             <!--begin::Table body-->
+                            <tbody class="fw-bold text-gray-600">
+                                @foreach ($review as $data)
+                                    <tr>
+                                        <td>
+                                            {{ $data->id }}
+                                        </td>
+                                        <td>
+                                            {{ $data->name }}
+                                        </td>
+                                        <td>
+                                            {{ $data->description }}
+                                        </td>
+                                        <td>
+                                            {{ $data->star }}
+                                        </td>
+                                        <td>
+                                            <img src={{ asset('storage/uploads/review/'.$data->image) }}
+                                                class="image" width="80" height="80" alt="{{$data->image}}"/>
 
+                                        </td>
+
+                                        <td class="text-end">
+
+                                            <a class="btn btn-primary"
+                                                href="{{ route('admin.review.edit', $data->id) }}">
+
+                                                <i class='fas fa-edit'></i>
+                                            </a>
+
+                                            {{-- <a href="{{ route('admin.category.delete', $data->id) }}"
+                                            onclick="return confirm('Are you sure to delete?')"
+                                            class=" px-3 btn btn-danger  btn-icon flex-shrink-0">
+                                            <i class='far fa-trash-alt'></i></a> --}}
+
+                                            {{-- <a href="#delModal"
+                                            class="trigger-btn btn btn-primary btn-icon flex-shrink-0 "
+                                            data-toggle="modal"> <i class='far fa-trash-alt'></i>
+                                        </a> --}}
+                                        </td>
+                                        <!--end::Action=-->
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
                             <!--end::Table body-->
                         </table>
                         <!--end::Table-->
@@ -108,7 +151,7 @@
             var table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('admin.subcategory.index') }}",
+                ajax: "{{ route('admin.review.index') }}",
                 columns: [{
                         data: 'DT_RowIndex',
                         name: 'DT_RowIndex'

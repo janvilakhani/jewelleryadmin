@@ -12,34 +12,37 @@ class SubCategoryController extends Controller
 {
     public function index(Request $request)
     {
+        // $subcategories  = SubCategory::all();
+        $subcategories=SubCategory::with('category')->get();
 
-        if ($request->ajax()) {
-            $data  = SubCategory::all();
-            // $model = Category::;
-            return DataTables::of($data)
-                ->addIndexColumn()
+        // dd($data);
+        // if ($request->ajax()) {
+        //     $data  = SubCategory::all();
+        //     // $model = Category::;
+        //     return DataTables::of($data)
+        //         ->addIndexColumn()
 
-                ->editColumn('category_id', function ($data) {
-                    return $data->category->category_name;
-                })
-                ->addColumn('action', function ($row) {
+        //         ->editColumn('category_id', function ($data) {
+        //             return $data->category->category_name;
+        //         })
+        //         ->addColumn('action', function ($row) {
 
-                    $btn = '<a href="' . route('admin.subcategory.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('admin.subcategory.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
-                           ';
+        //             $btn = '<a href="' . route('admin.subcategory.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
+        //                    <a href="' . route('admin.subcategory.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
+        //                    ';
 
-                    return $btn;
-                })
-                ->addColumn('image', function ($row) {
+        //             return $btn;
+        //         })
+        //         ->addColumn('image', function ($row) {
 
-                    return '<img src="' . asset('storage/uploads/subcategory/' . $row->image) . '"  class="image"/>';
-                })
-                ->rawColumns(['action', 'category_id', 'image'])
-                ->make(true);
-        }
+        //             return '<img src="' . asset('storage/uploads/subcategory/' . $row->image) . '"  class="image"/>';
+        //         })
+        //         ->rawColumns(['action', 'category_id', 'image'])
+        //         ->make(true);
+        // }
 
 
-        return view('admin.Sub-Category.index');
+        return view('admin.Sub-Category.index',compact('subcategories'));
     }
     public function create()
     {

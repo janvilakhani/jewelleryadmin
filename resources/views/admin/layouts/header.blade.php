@@ -37,11 +37,24 @@
 
                     <!--begin::Menu item-->
                     <div class="menu-item px-5">
-                        <a class="menu-link px-5" href="{{ route('logout') }}"
+                        {{-- <a class="menu-link px-5" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
-                        </a>
+                        </a> --}}
+                        <a href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+
+                                document.getElementById('logout-form').submit();">
+                                            Logout
+                            </a>
+                        {{-- <form id="logout_form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                           <button type="submit" class="btn btn-sm btn-danger">Logout</button>
+                     </form> --}}
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                     </div>
                     <!--end::Menu item-->
 
@@ -68,3 +81,18 @@
     @include('front.layouts.footer')
     <!--end::Footer-->
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).('#logout-form').submit(function(){
+     var isConfirm = confirm("Are you sure you want to logout?");
+
+     if(isConfirm){
+         return true;
+     } else {
+         return false;
+     }
+});
+
+
+</script>
+

@@ -13,7 +13,7 @@ class CategoryController extends Controller
     {
 
 
-            $data = Category::all();
+            $categories = Category::all();
         //     return DataTables::of($data)
         //         ->addIndexColumn()
 
@@ -35,7 +35,7 @@ class CategoryController extends Controller
 
 
 
-        return view('admin.Category.index',compact('data'));
+        return view('admin.Category.index',compact('categories'));
     }
     public function create()
     {

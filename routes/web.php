@@ -75,6 +75,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('review/index', [ReviewController::class, 'index'])->name('review.index');
     Route::get('review/create', [ReviewController::class, 'create'])->name('review.create');
     Route::post('review/store', [ReviewController::class, 'store'])->name('review.store');
+    Route::get('review/edit/{id}', [ReviewController::class, 'edit'])->name('review.edit');
+    Route::get('review/delete/{id}', [ReviewController::class, 'delete'])->name('review.delete');
+    Route::put('review/update/{id}', [ReviewController::class, 'update'])->name('review.update');
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

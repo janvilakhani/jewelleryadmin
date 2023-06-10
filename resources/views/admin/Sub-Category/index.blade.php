@@ -77,7 +77,7 @@
                                             <th>No</th>
                                             <th>Category Name</th>
                                             <th>SubCat. Name</th>
-                                            <th>Product Name</th>
+
                                             <th>Image</th>
                                             <th width="100px">Action</th>
 
@@ -86,7 +86,47 @@
                             </thead>
                             <!--end::Table head-->
                             <!--begin::Table body-->
+                            <tbody class="fw-bold text-gray-600">
+                                @foreach ($subcategories as $data)
+                                    <tr>
+                                        <td>
+                                            {{ $data->id }}
+                                        </td>
+                                        <td>
+                                            {{ $data->category->category_name }}
+                                        </td>
+                                        <td>
+                                            {{ $data->subcat_name }}
+                                        </td>
+                                        <td>
+                                            <img src={{ asset('storage/uploads/subcategory/'.$data->image) }}
+                                                class="image" width="80" height="80" alt="{{$data->image}}"/>
 
+                                        </td>
+
+                                        <td class="text-end">
+
+                                            <a class="btn btn-primary"
+                                                href="{{ route('admin.subcategory.edit', $data->id) }}">
+
+                                                <i class='fas fa-edit'></i>
+                                            </a>
+
+                                            {{-- <a href="{{ route('admin.category.delete', $data->id) }}"
+                                            onclick="return confirm('Are you sure to delete?')"
+                                            class=" px-3 btn btn-danger  btn-icon flex-shrink-0">
+                                            <i class='far fa-trash-alt'></i></a> --}}
+
+                                            {{-- <a href="#delModal"
+                                            class="trigger-btn btn btn-primary btn-icon flex-shrink-0 "
+                                            data-toggle="modal"> <i class='far fa-trash-alt'></i>
+                                        </a> --}}
+                                        </td>
+                                        <!--end::Action=-->
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
                             <!--end::Table body-->
                         </table>
                         <!--end::Table-->

@@ -12,30 +12,10 @@ class BannerController extends Controller
     public function index(Request $request)
     {
 
-        if ($request->ajax()) {
-            $data = Banner::all();
-            return DataTables::of($data)
-                ->addIndexColumn()
 
 
-                ->addColumn('action', function ($row) {
-
-                    $btn = '<a href="' . route('admin.banner.edit', ['id' => $row->id]) . '" class="edit btn btn-primary btn-sm">View</a>
-                           <a href="' . route('admin.banner.delete', ['id' => $row->id]) . '" class="edit btn btn-danger btn-sm">Delete</a>
-                           ';
-
-                    return $btn;
-                })
-                ->addColumn('image', function ($row) {
-
-                    return '<img src="' . asset('storage/uploads/banner/' . $row->image) . '"  class="image"/>';
-                })
-                ->rawColumns(['action', 'image'])
-                ->make(true);
-        }
-
-
-        return view('admin.Banner.index');
+        $banners = Banner::all();
+        return view('admin.Banner.index',compact('banners'));
     }
     public function create()
     {
