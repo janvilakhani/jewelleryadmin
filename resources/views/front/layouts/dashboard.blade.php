@@ -98,7 +98,7 @@
     </section>
     <!--Collection End -->
 
-    <!-- Portfolio Start -->
+    <!-- Portfolio Start -->@if($product)
     <div class="portfolio shape-bg ptb-100">
         <div class="container">
             <div class="default-section-title">
@@ -107,7 +107,16 @@
             </div>
             <div class="section-content">
                 <div class="portfolio-slider-area owl-carousel">
+                    @foreach ($product as $pro)
                     <div class="portfolio-card">
+                        <img src="{{ asset('front/assets/images/Home/silder/d1.png') }}" alt="image">
+                        <div class="portfolio-text">
+                            <p>{{$pro->category->category_name}}</p>
+                            <h4><a href="service-details.html">{{$pro->product_name}}</a></h4>
+                        </div>
+                    </div>
+                    @endforeach
+                    {{-- <div class="portfolio-card">
                         <img src="{{ asset('front/assets/images/Home/silder/d1.png') }}" alt="image">
                         <div class="portfolio-text">
                             <p>Office Cleaning</p>
@@ -134,11 +143,12 @@
                             <p>Room Cleaning</p>
                             <h4><a href="service-details.html">Floor Cleaning</a></h4>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
+    @endif
     <!-- Portfolio End -->
 
     <!-- Popular Locations Start 01-->
@@ -178,7 +188,7 @@
     <!-- Popular Locations End -->
 
     <!-- Teem Start -->
-    <div class="team bg-f9faff ptb-100">
+    {{-- <div class="team bg-f9faff ptb-100">
         <div class="container">
             <div class="default-section-title default-section-title-middle">
                 <h6>OUR TEAM</h6>
@@ -225,15 +235,50 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Teem End -->
 
     <!-- Silder Start -->
     <div class="Slider ptb-100">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-
+                @foreach ($review as $re)
                 <div class="swiper-slide">
+                    <div class="slider-card">
+                        <div class="card ptb-70">
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12 d-flex justify-content-center">
+                                        <img src="{{ asset('storage/uploads/review/'.$re->image)}}" alt="">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h1>{{$re->name}}</h1>
+                                        <p>{{$re->description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                {{-- <div class="swiper-slide">
+                    <div class="slider-card">
+                        <div class="card ptb-70">
+                            <div class="card-body">
+                                <div class="row justify-content-center">{{$review}}
+                                    <div class="col-lg-12 d-flex justify-content-center">
+                                        <img src="{{ asset('front/assets/images/Category/1.png') }}" alt="">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        {{-- <h1>{{$review->name}}</h1>
+                                        <p>{{$review->description}}</p> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{-- </div> --}}
+                {{-- <div class="swiper-slide">
                     <div class="slider-card">
                         <div class="card ptb-70">
                             <div class="card-body">
@@ -274,28 +319,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-card">
-                        <div class="card ptb-70">
-                            <div class="card-body">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-12 d-flex justify-content-center">
-                                        <img src="{{ asset('front/assets/images/Category/1.png') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <h1>Rushabh Nada</h1>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis rerum iure
-                                            hic
-                                            consectetur. Eveniet, fuga eos earum amet ullam optio magni unde officia quis
-                                            fugiat vero
-                                            repudiandae vel possimus!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
 
 
 

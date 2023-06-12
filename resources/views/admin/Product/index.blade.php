@@ -101,7 +101,7 @@
                                 </thead>
                                 <!--end::Table head-->
                                 <!--begin::Table body-->
-{{$product}}
+
 <tbody class="fw-bold text-gray-600">
     @foreach ($product as $data)
         <tr>
