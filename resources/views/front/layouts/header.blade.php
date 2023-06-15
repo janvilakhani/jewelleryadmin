@@ -78,9 +78,9 @@
             <div class="header-right1 d-flex align-items-center">
               <!-- Social -->
               <div class="header-social d-none d-md-block">
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://instagram.com/kankavati_gold?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=9924637843" target="_blank"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
             <!-- Mobile Menu -->

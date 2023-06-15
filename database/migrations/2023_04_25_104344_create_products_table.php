@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreign('subcategory_id')->nullable()->references('id')->on('sub_categories');
             $table->string('product_name')->nullable();
             $table->string('image')->nullable();
+            $table->string('product_description')->nullable();
             $table->timestamps();
         });
     }

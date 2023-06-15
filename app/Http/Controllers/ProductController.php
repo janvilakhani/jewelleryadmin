@@ -56,6 +56,7 @@ class ProductController extends Controller
             'subcategory_id' => 'required',
             'category_id' => 'required',
             'product_name' => 'required',
+
             'images' => 'required',
 
         ]);

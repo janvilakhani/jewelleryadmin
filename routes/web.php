@@ -26,6 +26,7 @@ Auth::routes();
 Route::get('/', [FrontController::class, 'getDashboard'])->name('front.index');
 Route::get('about', [FrontController::class, 'getAbout'])->name('front.about');
 Route::get('contact-us', [FrontController::class, 'getContact'])->name('front.contact');
+Route::get('product-detail/{id}', [SubCategoryController::class, 'product'])->name('front.subcategory.product');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
 
@@ -52,7 +53,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::get('subcategory/edit/{id}', [SubCategoryController::class, 'edit'])->name('subcategory.edit');
     Route::get('subcategory/delete/{id}', [SubCategoryController::class, 'delete'])->name('subcategory.delete');
     Route::put('subcategory/update/{id}', [SubCategoryController::class, 'update'])->name('subcategory.update');
-
 
     /* product */
     Route::get('product/index', [ProductController::class, 'index'])->name('product.index');

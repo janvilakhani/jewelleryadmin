@@ -103,6 +103,16 @@
                             @enderror
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Product Description</label>
+                            <input class="form-control form-control-lg @error('product_description') is-invalid @enderror"
+                                type="text" name="product_description" placeholder="Enter Product Description">
+                            @error('product_descriptions')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Image</label>
                             <input class="form-control @error('images') is-invalid @enderror" name="images"
                                 type="file" id="images">

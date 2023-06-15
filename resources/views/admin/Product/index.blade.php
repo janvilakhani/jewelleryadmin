@@ -93,6 +93,7 @@
                                                 <th>Category Name</th>
                                                 <th>SubCat. Name</th>
                                                 <th>Product Name</th>
+                                                <th>Product Description</th>
                                                 <th>Image</th>
                                                 <th width="100px">Action</th>
 
@@ -118,7 +119,10 @@
                 {{ $data->product_name }}
             </td>
             <td>
-                <img src={{ asset('storage/uploads/category/'.$data->image) }}
+                {{ $data->product_description }}
+            </td>
+            <td>
+                <img src={{ asset('storage/uploads/product/'.$data->image) }}
                     class="image" width="80" height="80" alt="{{$data->image}}"/>
 
             </td>

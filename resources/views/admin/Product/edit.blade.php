@@ -118,6 +118,17 @@
                             @enderror
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Product Description</label>
+                            <input class="form-control form-control-lg @error('product_description') is-invalid @enderror"
+                                type="text" name="product_description" placeholder="Enter Product Description"
+                                value="{{ $res->product_description }}">
+                            @error('product_name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Image</label> <img
                                 src={{ asset('storage/uploads/subcategory/' . $res->image) }} class="image"
                                 alt=""  width="80" height="80">

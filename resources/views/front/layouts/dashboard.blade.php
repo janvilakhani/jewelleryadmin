@@ -55,7 +55,7 @@
                                                     <span>{{$new->subcat_name}}</span>
                                                 </div>
                                                 <div class="favorit-items">
-                                                    <a href="category.html" class="btn2">Shop Now</a>
+                                                    <a href="{{route('front.subcategory.product',$new->id)}}" class="btn2">Shop Now</a>
                                                 </div>
                                             </div>
                                         </div>

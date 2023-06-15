@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -114,5 +115,14 @@ class SubCategoryController extends Controller
         SubCategory::where('id', $id)->delete();
         toastr()->success('delete successfully..!');
         return redirect()->route('subcategory.index');
+    }
+    public function product($id)
+    {
+        // dd("hello",$id);
+        $data=Product::where('subcategory_id',$id)->get();
+        return view('front.pages.product-detail',compact('data'));
+        // SubCategory::where('id', $id)->delete();
+        // toastr()->success('delete successfully..!');
+        // return redirect()->route('subcategory.index');
     }
 }
