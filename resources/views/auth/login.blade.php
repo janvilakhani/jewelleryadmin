@@ -2,9 +2,7 @@
 <!--begin::Head-->
 
 <head>
-    <base href="../../../">
-    <title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel
-        by Keenthemes</title>
+    <title>Kankavati Gold</title>
     <meta name="description"
         content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
     <meta name="keywords"
@@ -22,23 +20,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <link href="{{ asset('admin/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admin/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <style>
+        .btn-primary{
+            background-color:#41210a !important;
+        }
+        .color-primary{
+            color: #41210a !important;
+        }
+    </style>
 </head>
 <body id="kt_body" class="bg-body">
     <div class="d-flex flex-column flex-root">
         <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
             style="background-image: url(assets/media/illustrations/sketchy-1/14.png">
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-                <a href="../../demo1/dist/index.html" class="mb-12">
-                    <img alt="Logo" src="{{ asset('admin/assets/media/logos/logo-1.svg') }}" class="h-40px" />
-                </a>
-                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+                    <img alt="Logo" src="{{asset('front/assets/images/logo.png')}}" />
+                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto mt-5">
                     <form method="POST" class="form w-100" action="{{ route('login') }}">
                         @csrf
                         <div class="text-center mb-10">
-                            <h1 class="text-dark mb-3">Admin Sign In to Kankavti Gold</h1>
+                            <h1 class=" mb-3 color-primary">Admin Sign In to Kankavti Gold</h1>
                         </div>
                         <div class="fv-row mb-10">
-                            <label class="form-label fs-6 fw-bolder text-dark">{{ __('Email Address') }}</label>
+                            <label class="form-label fs-6 fw-bolder  color-primary">{{ __('Email Address') }}</label>
                             <input id="email" type="email"
                                 class="form-control   form-control-lg form-control-solid @error('email') is-invalid @enderror"
                                 name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -50,7 +54,7 @@
                         </div>
                         <div class="fv-row mb-10">
                             <div class="d-flex flex-stack mb-2">
-                                <label class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('Password') }}</label>
+                                <label class="form-label fw-bolder  color-primary fs-6 mb-0">{{ __('Password') }}</label>
 
                             </div>
                             <input id="password" type="password"

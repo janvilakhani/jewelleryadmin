@@ -32,7 +32,7 @@
                   <div class="category-load">
                     <h1>{{$data->product_name}}</h1>
                     <p>{{$data->product_description}}</p>
-                    <a href="https://api.whatsapp.com/send?phone=9924637843" target="_blank" class="btn2">Inguiry Now</a>
+                    <a href="https://api.whatsapp.com/send?phone=9099080109" target="_blank" class="btn2">Inguiry Now</a>
                   </div>
                 </div>
               </div>

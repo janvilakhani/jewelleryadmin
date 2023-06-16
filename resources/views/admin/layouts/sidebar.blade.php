@@ -1,9 +1,16 @@
+@section('custom_css')
+<style>
+    .w-95{
+        width: 95% !important;
+    }
+</style>
+@endsection
 <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
     <!--begin::Brand-->
     <div class="aside-logo flex-column-auto" id="kt_aside_logo">
         <!--begin::Logo-->
-        <a href="../../demo1/dist/index.html">
-            <img alt="Logo" src="assets/media/logos/logo-1-dark.svg" class="h-25px logo" />
+        <a href="javascript:void(0)">
+            <img alt="Logo" src="{{asset('front/assets/images/Logo2.png')}}" class="w-95" style="width: 95% !important;"/>
         </a>
         <!--end::Logo-->
         <!--begin::Aside toggler-->
@@ -32,7 +39,7 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link active" href="../../demo1/dist/index.html">
+                    <a class="menu-link active" href="javascript:void(0)">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
                             <span class="svg-icon svg-icon-2">

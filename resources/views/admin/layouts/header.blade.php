@@ -20,7 +20,7 @@
             <!--begin::Mobile logo-->
             <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                 <a href="../../demo1/dist/index.html" class="d-lg-none">
-                    <img alt="Logo" src="assets/media/logos/logo-2.svg" class="h-30px" />
+                    <img alt="Logo" src="{{asset('front/assets/images/logo.png')}}" class="h-30px" />
                 </a>
             </div>
             <!--end::Mobile logo-->
@@ -82,17 +82,4 @@
     <!--end::Footer-->
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $(document).('#logout-form').submit(function(){
-     var isConfirm = confirm("Are you sure you want to logout?");
-
-     if(isConfirm){
-         return true;
-     } else {
-         return false;
-     }
-});
-
-
-</script>
 
