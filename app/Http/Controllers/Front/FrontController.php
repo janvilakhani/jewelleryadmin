@@ -16,11 +16,19 @@ class FrontController extends Controller
     {
         $banner=Banner::get()->first();
         $newArrival=SubCategory::inRandomOrder()->limit(4)->get();
+        $getTwoSubCat=SubCategory::inRandomOrder()->limit(2)->get();
+        $proName='';
+        if(count($getTwoSubCat)>0){
+            foreach ($getTwoSubCat as $key => $cat) {
+                $comma=$proName!=''?',':'';
+                $proName=$proName.$comma.$cat->subcat_name;
+            }
+        }
         $review=Review::inRandomOrder()->limit(4)->get();
         $product=Product::inRandomOrder()->with('category','subcategory')->limit(6)->get();
 
         // $url=asset('storage/uploads/banner/'.$banner->image);
-        return view('front.layouts.dashboard',compact('banner','newArrival','review','product'));
+        return view('front.layouts.dashboard',compact('banner','newArrival','review','product','getTwoSubCat','proName'));
 
     }
     public function getAbout()

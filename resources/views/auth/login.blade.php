@@ -27,6 +27,10 @@
         .color-primary{
             color: #41210a !important;
         }
+        .btn-check:active+.btn.btn-primary, .btn-check:checked+.btn.btn-primary, .btn.btn-primary.active, .btn.btn-primary.show, .btn.btn-primary:active:not(.btn-active), .btn.btn-primary:focus:not(.btn-active), .btn.btn-primary:hover:not(.btn-active), .show>.btn.btn-primary{
+            background-color:#41210a !important;
+
+        }
     </style>
 </head>
 <body id="kt_body" class="bg-body">

@@ -30,7 +30,7 @@
               </div>
               <div class="col-lg-11 col-md-11 col-sm-11">
                 <b>Phone</b>
-                <p class="ape">+91 78945 61230</p>
+                <p class="ape">+91 9099080109</p>
               </div>
             </div>
             <div class="row align-items-center my-4">

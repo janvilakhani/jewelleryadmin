@@ -35,15 +35,15 @@
                   <i class="fas fa-envelope"></i>
                   <h5>Email:</h5>
                   <p><a
-                      href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#e99a9c9999869b9da988879e88c78a8684"><span
+                      href="#"><span
                         class="__cf_email__"
-                        data-cfemail="d5a6a0a5a5baa7a195b4bba2b4fbb6bab8">[email&#160;protected]</span></a>
+                        >[email&#160;protected]</span></a>
                   </p>
                 </div>
                 <div class="footer-content-card">
                   <i class="fas fa-mobile-alt"></i>
                   <h5>Phone:</h5>
-                  <p><a href="tel:+13454567877">+1-3454-5678-77</a></p>
+                  <p><a href="tel:+9099080109">+91-9099080109</a></p>
                 </div>
               </div>
             </div>

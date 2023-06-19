@@ -159,7 +159,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-12 py-4" style="padding-left: 0px;">
                         <div class="single-product mb-50">
                             <div class="location-img" style="box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;">
-                                <img src="{{ asset('front/assets/images/Home/pop/14.jpg') }}" alt=""
+                                <img src="{{ asset('storage/uploads/subcategory/'.$getTwoSubCat[0]->image) }}" alt=""
                                     class="">
                             </div>
                         </div>
@@ -168,8 +168,8 @@
                         <div class="single-product mb-50 d-flex justify-content-center position-relative w-100">
                             <div class="align-content-center align-items-center">
                                 <div class="location-img text-center">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <a href="category.html" class="btn2 mt-3">Read More</a>
+                                    <h1>{{$proName}}.</h1>
+                                    <a href="{{route('front.subcategory.product',$getTwoSubCat[0]->id)}}" target="_blank" class="btn2 mt-3">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +177,8 @@
                     <div class="col-lg-4 col-md-7 col-sm-12 py-4" style="padding-right: 0px;">
                         <div class="single-product mb-50">
                             <div class="location-img" style="box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px 0px;">
-                                <img src="{{ asset('front/assets/images/Home/pop/15.jpg') }}" alt="">
+                                <img src="{{ asset('storage/uploads/subcategory/'.$getTwoSubCat[1]->image) }}" alt=""
+                                class="">
                             </div>
                         </div>
                     </div>
